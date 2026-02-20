@@ -1,0 +1,69 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 60px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.logoImg {
+  height: 36px;
+  width: auto;
+}
+
+.logoText {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #E8651A;
+  letter-spacing: -0.3px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.iconBtn {
+  border: 1px solid rgba(239, 108, 0, 0.5) !important;
+  background-color: transparent !important;
+  color: #ef6c00 !important;
+  border-radius: 4px !important;
+  transition: background-color 0.2s, border-color 0.2s !important;
+}
+
+.iconBtn:hover {
+  background-color: rgba(239, 108, 0, 0.08) !important;
+}
+
+.iconBtnActive {
+  border: 1px solid #ef6c00 !important;
+  background-color: #ef6c00 !important;
+  color: #fff !important;
+  border-radius: 4px !important;
+}
+
+.iconBtnActive:hover {
+  background-color: #d45a15 !important;
+  border-color: #d45a15 !important;
+}
+
+@media (max-width: 667px) {
+  .logoText {
+    display: none;
+  }
+}
+

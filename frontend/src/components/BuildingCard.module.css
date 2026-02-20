@@ -1,0 +1,118 @@
+.card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 3 / 3.2;
+  background-color: #ccc;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+/* Building photo */
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Rooms available badge */
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 15px;
+  background-color: rgba(255, 255, 255, 0.92);
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+  backdrop-filter: blur(4px);
+}
+
+.badgeDesktop {
+  display: inline;
+}
+
+.badgeMobile {
+  display: none;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #22c55e;
+  flex-shrink: 0;
+}
+
+.nameLabel {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  padding: 15px 14px;
+  background-color: #E8651A;
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Mobile: below 667px */
+@media (max-width: 667px) {
+  .card {
+    aspect-ratio: 35 / 7;
+  }
+
+  /* Dark gradient overlay so text is readable */
+  .card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 50%);
+    border-radius: inherit;
+    pointer-events: none;
+  }
+
+  .nameLabel {
+    background-color: transparent;
+    right: auto;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+    border-radius: 0;
+    z-index: 1;
+  }
+
+  .badge {
+    top: auto;
+    bottom: 12px;
+    right: 12px;
+    z-index: 1;
+    border-radius: 999px;
+  }
+
+  .badgeDesktop {
+    display: none;
+  }
+
+  .badgeMobile {
+    display: inline;
+  }
+}
+

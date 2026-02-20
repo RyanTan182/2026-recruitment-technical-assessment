@@ -1,0 +1,6 @@
+frontend/node_modules
+frontend/dist
+frontend/build
+backend/py_template/venv
+backend/autotester/node_modules
+backend/py_template/venv/lib/python3.12/site-packages/werkzeug-3.1.6.dist-info/INSTALLER

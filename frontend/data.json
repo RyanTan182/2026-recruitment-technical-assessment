@@ -12,7 +12,7 @@
     {
       "name": "Anita B Lawrence Centre",
       "rooms_available": 44,
-      "building_picture": "./anitb.webp"
+      "building_picture": "./anitab.webp"
     },
     {
       "name": "Biological Sciences",
@@ -22,7 +22,7 @@
     {
       "name": "Biological Science (West)",
       "rooms_available": 8,
-      "building_picture": "biologicalScienceWest.webp"
+      "building_picture": "./biologicalScienceWest.webp"
     },
     {
       "name": "Blockhouse",
